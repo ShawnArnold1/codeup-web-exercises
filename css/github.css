@@ -1,16 +1,28 @@
-.listedit
+.codeup
     {
-        background-color: black;
-        display: inline;
+        position: relative;
+        top: 50px;
+        left: 30px;
+
     }
 
-.Thisclass
-        {
-            display: inline;
-            background-color: blue;
-        }
+#imggg
+    {
+        position: relative;
+        height: 50px;
+        width: 50px;
+        float: left;
+        background-size: 900% 200%;
+        padding: 2px;
+        background: black;
+    }
 
-.Img1
-        {
-            align: top;
-        }
+.nav2
+    {
+        position: relative;
+        display: inline-block;
+        top: 35px;
+        left: 9px;
+        height: 0px;
+        width: 600px;
+    }
