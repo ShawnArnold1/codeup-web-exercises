@@ -1,0 +1,133 @@
+/* selector for id="container" */
+#container {
+    margin: 50px auto;
+    width: 500px;
+    padding: 10px;
+}
+
+/*  selector for all "h1" elements
+    that are a descendent of id="container"
+    and have a class of "fancy-header" */
+#container h1.fancy-header {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* selector for all "em" elements */
+em {
+    font-weight: bold;
+}
+
+/* selector for all elements with class="article" */
+.article {
+    clear:both;
+}
+
+/*  selector for all "anchor" elements
+    that are a direct child of an element with class="article" */
+.article>a {
+    float:right;
+}
+
+#mainh
+{
+    text-align: center;
+    color: deeppink;
+    text-decoration: underline;
+}
+
+html
+{
+    background-image: url(../img/iroh.png);
+    background-size: 1000px 950px;
+    background-repeat: no-repeat;
+    
+}
+
+/* .principles
+{
+    background-image: url("../img/AVTAR.jpg");
+} */
+
+.litest {
+    list-style-type: none;
+}
+
+/* .litest > li::before {   
+    content: '';   
+    display: inline-block;   
+    height: 90px;   
+    width: 90px;    
+    background-size: 40px;   
+    background-image: url(../img/codeup-logo.png); 
+    background-repeat: no-repeat;   
+    margin-right: 100px;
+    background-position: center center;
+    vertical-align: middle;
+} */
+
+
+ body
+ {
+     font-family: fantasy;
+ }
+
+ ul {
+    list-style: none;
+}
+
+li {
+    position: relative;
+}
+
+li:before {
+    /*
+    The desired width gets defined in two places: The element width, and background size.
+    The height only gets defined once, in background size.
+    */
+    position: absolute;
+    display: block;
+    content: '\2022'; /* bullet point, for screen readers */
+    text-indent: -999999px; /* move the bullet point out of sight */
+    left: -.75em;
+    width: .79em; /* desired width of the image */
+    height: 100em; /* unrelated to image height; this is so it gets snipped */
+    background-repeat: no-repeat;
+    background-image: url(../img/codeup-logo.png);
+    background-size: .88em .88em;
+    background-position: 0 .3em;
+    list-style-position: outside;
+}
+
+table
+{
+    padding: 20px;
+    font-family: cursive
+}
+
+td
+{
+    padding: 25px;
+    border: solid 3px lime;
+}
+
+th
+{
+    padding: 25px;
+    border: solid 3px lime;
+}
+
+tr:hover
+{
+    background-color: maroon
+}
+
+a:hover
+{
+    background-color: cyan;
+}
+
+a:active
+{
+
+}
