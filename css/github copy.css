@@ -1,0 +1,14 @@
+.listedit
+    {
+        background-color: black;
+        display: inline;
+    }
+
+#imggg
+    {
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        float: left;
+        padding: 2px;
+    }
