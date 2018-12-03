@@ -4,7 +4,7 @@
     var person = {};
     person.firstName = "Shawn";
     person.lastName = "Arnold";
-    person.sayHello = function() {
+    person.sayHello = function () {
         console.log(
             "Hello! Its very nice to meet you, " +
             this.firstName +
@@ -53,12 +53,12 @@
      */
 
     var shoppers = [
-        { name: "Cameron", amount: 180 },
-        { name: "Ryan", amount: 250 },
-        { name: "George", amount: 320 }
+        {name: "Cameron", amount: 180},
+        {name: "Ryan", amount: 250},
+        {name: "George", amount: 320}
     ];
 
-    shoppers.forEach(function(shopper) {
+    shoppers.forEach(function (shopper) {
         if (shopper.amount >= 200) {
             var discount = shopper.amount * 0.12;
             console.log(
@@ -82,22 +82,22 @@
     var books = [
         {
             title: "You don't know JS",
-            author: { firstName: "BoBandy", lastName: "Regan" }
+            author: {firstName: "BoBandy", lastName: "Regan"}
         },
         {
             title: "The Hunger Games",
-            author: { firstName: "CatNiss", lastName: "Arnold" }
+            author: {firstName: "CatNiss", lastName: "Arnold"}
         },
         {
             title: "The Outsiders",
-            author: { firstName: "Unknown", lastName: "Top dog" }
+            author: {firstName: "Unknown", lastName: "Top dog"}
         }
     ];
 
     console.log(books[0]);
     var n = 1;
 
-    books.forEach(function(book) {
+    books.forEach(function (book) {
         console.log("Book #" + n);
         console.log("Title: " + book.title);
         console.log(
@@ -146,10 +146,11 @@
      */
 
     var newBooks = [];
+
     function createBook() {
         var books = {
             title: "test",
-            author: { firstName: "Test", lastName: "Test" }
+            author: {firstName: "Test", lastName: "Test"}
         };
         books.title = prompt("Plase enter book title here!");
         books.author.firstName = prompt(
@@ -164,6 +165,14 @@
     createBook();
     console.log(newBooks);
 
+
+
+
+
+
+
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -174,4 +183,12 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
+
+
+
+
+
 })();
+
