@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            #map-canvas {
+                width: 770px;
+                height: 481px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- div to hold map -->
+        <div id="map-canvas"></div>
+        <input type="text" id="inputInfo">
+        <button id="btn">Test</button>
+        
+        <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBacpbHqmIiOKvekxXpUGehXeq0u5OF1E4"></script>
+        
+        <!-- Script to show address on map -->
+        <script type="text/javascript">
+            (function() {
+                "use strict";
+
+                // Set our map options
+                var mapOptions = {
+                    // Set the zoom level
+                    zoom: 14,
+
+                    // This sets the center of the map at our location
+                    center: {
+                        lat:  64.838632,
+                        lng: -147.777355
+                    }
+                };
+
+                // Render the map
+                var geocoder = new google.maps.Geocoder();
+                var btn = document.getElementById('btn');
+                btn.addEventListener('click', function(){
+                    var myAddress = document.getElementById('inputInfo').value;
+                    geocoder.geocode({ "address": myAddress }, function(results, status) {
+                        // Check for a successful result
+                        if (status == google.maps.GeocoderStatus.OK) {
+                            // Recenter the map over the address
+                            console.log(results);
+                            map.setCenter(results[0].geometry.location);
+                        } else {
+                            // Show an error message with the status if our request fails
+                            alert("Geocoding was not successful - STATUS: " + status);
+                        }
+                    });
+                });
+                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+                var salmon ={lat: 64.838632, lng: -147.777355};
+                var infoWindow = new google.maps.InfoWindow ({
+                    content: "Best salmon in the US"
+                });
+                var marker = new google.maps.Marker({
+                    position: salmon,
+                    map: map
+                });
+                infoWindow.open(map, marker)
+
+            })();
+        </script>
+    </body>
+</html>
