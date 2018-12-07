@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lecture</title>
+        <style>
+            body
+            {
+                height: 100vh;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="intro">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam dolor dolorum eum fugiat iure magni minima minus nam quae, qui quis reprehenderit tempore temporibus tenetur? Asperiores excepturi nemo praesentium.
+        </p>
+        
+        
+        <button
+            id="remove-event">
+            Remove Events
+        </button>
+        
+        <script>
+            "use strict";
+           var body = document.getElementById('intro');
+           var removeBtn = document.querySelector("#remove-event");
+            body.addEventListener('click', function()
+            {
+                alert("Buy a membership!");
+            });
+
+
+            var adsEvents = function()
+            {
+                alert("Buy a membership!");
+            };
+            intro.addEventListener('click', adsEvents);
+
+            var removeEvents = function()
+           {
+               intro.removeEventListener('click', adsEvents);
+           };
+           
+          
+            
+            
+            removeBtn.addEventListener('click', removeEvents);
+            
+            
+            
+            
+            
+            
+            
+        </script>
+        
+    </body>
+</html>
