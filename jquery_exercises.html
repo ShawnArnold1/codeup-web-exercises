@@ -16,18 +16,18 @@
         <li class="item">iPhone</li>
         <li class="item">iPad</li>
     
-        <ul class="unOrdered"></ul>
-        <ul class="unOrdered"></ul>
-        <ul class="unOrdered"></ul>
+        <ul class="unOrdered">a</ul>
+        <ul class="unOrdered">b</ul>
+        <ul class="unOrdered">c</ul>
         
-        <h1 id="lowHI">Example Page</h1>
+        <h1 class="codeup">Example Page</h1>
         <div class="important">
             <h3 id="hiyaH">NOTICE</h3>
-            <p class="important">This is an important message!</p>
+            <p class="codeup">This is an important message!</p>
         </div>
         <div class="not-important">
             <h2 id="highH">Lorem Ipsum</h2>
-            <p id="lowP">Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.</p>
+            <p class="codeup">Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.</p>
         </div>
         <p class="important">This is also very important.</p>
         
@@ -49,9 +49,19 @@
                     var aCont = $('#hiyaH').text();
                     alert(aCont);
                 })
-                alert("Your page has loaded BOI")
+                alert("Your page has loaded BOI");
+                
+                
+                $('.codeup').css('border', '1px solid blue');
+                
+                $('li').css('font-size', '23px');
+                
+                
+                
             });
-            $('.unOrdered')
+            
+            
+            
         </script>
     </body>
 </html>
