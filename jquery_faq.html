@@ -13,6 +13,15 @@
     </style>
     </head>
     <body>
+        <div>
+            <h1>
+                Would you like to sign up for the newsletter?
+                <span id="xSpot">
+                    X
+                </span>
+            </h1>
+        </div>
+        
         <DL>
             <LH>
                 FAQ about National Parks!
@@ -275,7 +284,36 @@ $('ul').click(function()
      {
          $(this).children().first().css('color', 'blue')
      })
+      
+      
+      //
+      // $('span#xSpot').click(function()
+      // {
+      //     $('h1').fadeToggle();
+      // })
+      //
+
+
+      //
+      $('div').children().children().click(function()
+        {
+            $(this).click(function()
+            {
+                $('div').fadeOut()
+            })
+        })
         
+       $('dd').children().slideToggle()
+       
+       $('dd').prev().click(function()
+       {
+           $('dd').children().slideToggle()
+       })
+
+      setTimeout(function()
+      {
+          confirm('Would you like to register')
+      }, 8000)
         </script>
 
     </body>
