@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Konami Code</title>
+    </head>
+    <body>
+        <h1>Konami Code</h1>
+        
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            "use strict";
+            
+            // Go over why it doesn't work in an array(for me)
+            
+            var konami = '3838404037393739666513';
+            var userKeys = '';
+                
+                
+               $(document).keydown(function (event)
+                {
+                    userKeys += event.keyCode;
+                });
+            $(document).keypress(function(e)
+            {
+                if(e.which == 13)
+                {
+                    
+                    if (userKeys == konami)
+                    {
+                        alert('You have added 30 lives!')
+
+                    }
+                        else
+                    {
+                        alert('WRONG CODE')
+                        userKeys = '';
+                    }
+                }
+
+            });
+            
+            
+            
+                
+                
+            
+            
+        </script>
+    </body>
+</html>
