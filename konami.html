@@ -3,26 +3,25 @@
     <head>
         <title>Konami Code</title>
         <style>
-            #myVideo
-            {
-                position: fixed;
-                right: 0;
-                bottom: 0;
-                min-width: 100%;
-                min-height: 100%;
-            }
+            /*iframe*/
+            /*{*/
+                /*position: relative;*/
+                /*right: 0;*/
+                /*bottom: 0;*/
+                /*min-width: auto;*/
+                /*min-height: auto;*/
+            /*}*/
         </style>
     </head>
     <body>
         <h1>Konami Code</h1>
-        
        <div id="videoFrame"></div>
         
         <script src="js/jquery-3.3.1.min.js"></script>
         <script>
             "use strict";
             
-            // Go over why it doesn't work in an array in morning class(for me)
+           
             
             var konami = '3838404037393739666513';
             var userKeys = '';
@@ -38,13 +37,13 @@
                 {
                     if (userKeys == konami)
                     {
-                        alert('You have added 30 lives!')
+                        alert('Happy birthday, my son.')
                         var iframe = document.createElement('iframe');
-                        iframe.src = "img/myMovie.mp4";
-                        iframe.width = "100%";
-                        iframe.height = "100%";
+                        iframe.src = "img/soldier.mp4";
+                        iframe.width = "712px";
+                        iframe.height = "690px";
                         var videoDiv = document.getElementById('videoFrame');
-                        videoFrame.appendChild(iframe);
+                        videoDiv.appendChild(iframe);
                     }
                         else
                     {
