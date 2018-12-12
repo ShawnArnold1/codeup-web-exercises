@@ -122,9 +122,71 @@
             <button  type="submit" id="toggleInvis9">Click me for more information!</button>
             </DT>
             <br>
-            
-            
         </DL>
+            <dl>
+             <lh>
+                 FAQ Continued!
+            </lh>
+                <hr>
+                    <h3>
+                        Facts about National park a
+                    </h3>
+                    <dd>
+                <ul class="listHighlight">
+                    <li>
+                        Great
+                    </li>
+                    <li>
+                        Big
+                    </li>
+                    <li>
+                        YUGE
+                    </li>
+                    <li>
+                        Purdy
+                    </li>
+                </ul>
+                </dd>
+                    <h3>
+                        Facts about National park a
+                    </h3>
+                <dd>
+                    <ul class="listHighlight">
+                        <li>
+                            Great
+                        </li>
+                        <li>
+                            Big
+                        </li>
+                        <li>
+                            YUGE
+                        </li>
+                        <li>
+                            Purdy
+                        </li>
+                    </ul>
+                </dd>
+                    <h3>
+                        Facts about National park a
+                    </h3>
+                <dd>
+                    <ul class="listHighlight">
+                        <li>
+                            Great
+                        </li>
+                        <li>
+                            Big
+                        </li>
+                        <li>
+                            YUGE
+                        </li>
+                        <li>
+                            Purdy
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <button type="submit" id="highlighter">Click here to highlight important information!</button>
         <script src="js/jquery-3.3.1.min.js"></script>
         <script>
             $('button#toggleInvis0').click(function()
@@ -177,14 +239,43 @@
                 $(this).prev().toggleClass('invisible')
             })
             // next method
+            // $('button#highlighter').click(function()
+            // {
+            //
+            //     var listItems = $('ul.listHighlight')
+            //     console.log(listItems);
+            // // $('ul').children().last().css('background-color', 'yellow')
+            //     console.log(listItems.children)
+            //     listItems.each().children().last.css('background-color', 'yellow');
+            //
+            // })
 
 
 
+$('#highlighter').click(function()
+{
+    $('ul').each(function()
+    {
+        $(this).children().last().css('background-color', 'yellow')
+    })
+})
 
+$('h3').click(function()
+    {
+        $(this).next().children().css('font-weight', 'bold').css('background-color', 'blue')
+    })
 
-
-
-
+    
+    
+$('li').click(function()
+     {
+         $(this).parent().children().first().css('color', 'blue')
+     })
+$('ul').click(function()
+     {
+         $(this).children().first().css('color', 'blue')
+     })
+        
         </script>
 
     </body>
