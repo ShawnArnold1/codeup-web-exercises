@@ -58,9 +58,9 @@
                 </button>
             </div>
         </div>
-        <div class="row justify-content-center form-group form-inline cardHolder">
-            <div class="col-lg-3">
-                <div class="card showWeather" style="width: 25rem;">
+        <div class="row">
+            <div class="justify-content-center form-group form-inline cardHolder col-lg-3">
+                <div class="card showWeather" style="width: 25rem">
                     <div class="card-body">
                         <div class="card-title" style="font-size: 8px">
                             <h3 class="card-title cityName"></h3>
@@ -74,33 +74,32 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="row form-group form-inline cardHolder col-lg-3">
-                <div class="card showWeather" style="width: 25rem;">
+            <div class="justify-content-center form-group form-inline cardHolder col-lg-3">
+                <div class="card showWeather" style="width: 25rem">
                     <div class="card-body">
                         <div class="card-title" style="font-size: 8px">
                             <h3 class="card-title cityName"></h3>
                         </div>
                         <p class="card-text">
-                        <div class="lowTemp1"></div>
-                        <div class="tempDiv1"></div>
-                        <div class="humDiv1"></div>
-                        <div class="cloudDiv1"></div>
+                        <div class="lowTemp8"></div>
+                        <div class="tempDiv8"></div>
+                        <div class="humDiv8"></div>
+                        <div class="cloudDiv8"></div>
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="row form-group form-inline cardHolder col-lg-3">
-                <div class="card showWeather" style="width: 25rem;">
+            <div class="justify-content-center form-group form-inline cardHolder col-lg-3">
+                <div class="card showWeather" style="width: 25rem">
                     <div class="card-body">
                         <div class="card-title" style="font-size: 8px">
                             <h3 class="card-title cityName"></h3>
                         </div>
                         <p class="card-text">
-                        <div class="lowTemp2"></div>
-                        <div class="tempDiv2"></div>
-                        <div class="humDiv2"></div>
-                        <div class="cloudDiv2"></div>
+                        <div class="lowTemp8"></div>
+                        <div class="tempDiv8"></div>
+                        <div class="humDiv8"></div>
+                        <div class="cloudDiv8"></div>
                         </p>
                     </div>
                 </div>
@@ -136,17 +135,17 @@
                             $('.cardHolder').slideToggle();
                             $('.cityName').html(city);
                             $('.tempDiv').html('<h6>Current Temp - ' + data.list[0].main.temp + ' Degrees</h6>');
-                            $('.humDiv').html('<h6>Sky Description - ' + data.list[0].weather[0].description + '</h6>');
-                            $('.lowTemp').html('<h6>Lowest Temp - ' + data.list[0].main.temp_min + '</h6>');
-                            $('.cloudDiv').html(data.list[0].dt_txt);
-                            $('.lowTemp1').html('<h6>Lowest Temp - ' + data.list[8].main.temp_min + '</h6>');
-                            $('.tempDiv1').html('<h6>Current Temp - ' + data.list[8].main.temp + ' Degrees</h6>');
-                            $('.humDiv1').html('<h6>Sky Description - ' + data.list[8].weather[0].description + '</h6>');
-                            $('.cloudDiv1').html(data.list[8].dt_txt);
-                            $('.lowTemp2').html('<h6>Lowest Temp - ' + data.list[16].main.temp_min + '</h6>');
-                            $('.tempDiv2').html('<h6>Current Temp - ' + data.list[16].main.temp + ' Degrees</h6>');
-                            $('.humDiv2').html('<h6>Sky Description - ' + data.list[16].weather[0].description + '</h6>');
-                            $('.cloudDiv2').html(data.list[16].dt_txt);
+                            // $('.humDiv').html('<h6>Sky Description - ' + data.list[0].weather[0].description + '</h6>');
+                            // $('.lowTemp').html('<h6>Lowest Temp - ' + data.list[0].main.temp_min + '</h6>');
+                            // $('.cloudDiv').html(data.list[0].dt_txt);
+                            // $('.lowTemp').html('<h6>Lowest Temp - ' + data.list[8].main.temp_min + '</h6>');
+                            $('.tempDiv8').html('<h6>Current Temp - ' + data.list[8].main.temp + ' Degrees</h6>');
+                            // $('.humDiv').html('<h6>Sky Description - ' + data.list[8].weather[0].description + '</h6>');
+                            // $('.cloudDiv').html(data.list[8].dt_txt);
+                            // $('.lowTemp').html('<h6>Lowest Temp - ' + data.list[16].main.temp_min + '</h6>');
+                            $('.tempDiv16').html('<h6>Current Temp - ' + data.list[38].main.temp + ' Degrees</h6>');
+                            // $('.humDiv').html('<h6>Sky Description - ' + data.list[16].weather[0].description + '</h6>');
+                            // $('.cloudDiv').html(data.list[16].dt_txt);
                             $('#city').val('');
                         })
                     } else
