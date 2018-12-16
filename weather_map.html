@@ -17,6 +17,10 @@
             {
                 padding-left: 15px!important;
                 padding-right: 15px!important;
+                /*text-align: center;*/
+            }
+            .card {
+                /*display: inline-block;*/
             }
             #rowDiv
             {
@@ -58,57 +62,54 @@
                 </button>
             </div>
         </div>
-        <div class="row">
-            <div class="justify-content-center form-group form-inline cardHolder col-lg-3">
-                <div class="card showWeather" style="width: 25rem">
-                    <div class="card-body">
-                        <div class="card-title" style="font-size: 8px">
-                            <h3 class="card-title cityName"></h3>
-                        </div>
-                        <p class="card-text">
-                        <div class="lowTemp"></div>
-                        <div class="tempDiv"></div>
-                        <div class="humDiv"></div>
-                        <div class="cloudDiv"></div>
-                        </p>
+        <div class=" justify-content-center row cardHolder">
+            <div class="card showWeather col-4" style="width: 25rem;">
+                <div class="card-body">
+                    <div class="card-title" style="font-size: 8px">
+                        <h3 class="card-title cityName"></h3>
                     </div>
+                    <p class="card-text">
+                    <div class="lowTemp0"></div>
+                    <div class="tempDiv0"></div>
+                    <div class="humDiv0"></div>
+                    <div class="cloudDiv0"></div>
+                    </p>
                 </div>
             </div>
-            <div class="justify-content-center form-group form-inline cardHolder col-lg-3">
-                <div class="card showWeather" style="width: 25rem">
-                    <div class="card-body">
-                        <div class="card-title" style="font-size: 8px">
-                            <h3 class="card-title cityName"></h3>
-                        </div>
-                        <p class="card-text">
-                        <div class="lowTemp8"></div>
-                        <div class="tempDiv8"></div>
-                        <div class="humDiv8"></div>
-                        <div class="cloudDiv8"></div>
-                        </p>
+            
+            <div class="card showWeather col-4" style="width: 25rem;">
+                <div class="card-body">
+                    <div class="card-title" style="font-size: 8px">
+                        <h3 class="card-title cityName"></h3>
                     </div>
+                    <p class="card-text">
+                    <div class="lowTemp8"></div>
+                    <div class="tempDiv8"></div>
+                    <div class="humDiv8"></div>
+                    <div class="cloudDiv8"></div>
+                    </p>
                 </div>
             </div>
-            <div class="justify-content-center form-group form-inline cardHolder col-lg-3">
-                <div class="card showWeather" style="width: 25rem">
-                    <div class="card-body">
-                        <div class="card-title" style="font-size: 8px">
-                            <h3 class="card-title cityName"></h3>
-                        </div>
-                        <p class="card-text">
-                        <div class="lowTemp8"></div>
-                        <div class="tempDiv8"></div>
-                        <div class="humDiv8"></div>
-                        <div class="cloudDiv8"></div>
-                        </p>
+            
+            <div class="card showWeather col-4" style="width: 25rem;">
+                <div class="card-body">
+                    <div class="card-title" style="font-size: 8px">
+                        <h3 class="card-title cityName"></h3>
                     </div>
+                    <p class="card-text">
+                    <div class="lowTemp16"></div>
+                    <div class="tempDiv16"></div>
+                    <div class="humDiv16"></div>
+                    <div class="cloudDiv16"></div>
+                    </p>
                 </div>
             </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
-        <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        </div>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script>
             $(document).ready(function()
@@ -129,23 +130,45 @@
                             datatype: "jsonp"
                         }).done(function(data)
                         {
-
                             console.log(data);
                             console.log(data.list[0].main.temp);
                             $('.cardHolder').slideToggle();
-                            $('.cityName').html(city);
-                            $('.tempDiv').html('<h6>Current Temp - ' + data.list[0].main.temp + ' Degrees</h6>');
+                            
+                            for(var i = 0; i < data.length; i += 8)
+                            {
+                                $('.cityName').html(city);
+                                $('.tempDiv[i]').html('<h6>Sky Description - ' + data.list[i].main.temp + '˚F</h6>');
+                                $('.humDiv[i]').html('<h6>Sky Description - ' + data.list[i].weather[0].description + '</h6>');
+                                $('.lowTemp[i]').html('<h6>Lowest Temp - ' + data.list[i].main.temp_min + '˚F</h6>');
+                            }
+                          
+                          
+                          
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                          
+                            // $('.cityName').html(city);
+                            // $('.tempDiv').html('<h6>Current Temp - ' + data.list[0].main.temp + ' Degrees</h6>');
                             // $('.humDiv').html('<h6>Sky Description - ' + data.list[0].weather[0].description + '</h6>');
                             // $('.lowTemp').html('<h6>Lowest Temp - ' + data.list[0].main.temp_min + '</h6>');
                             // $('.cloudDiv').html(data.list[0].dt_txt);
-                            // $('.lowTemp').html('<h6>Lowest Temp - ' + data.list[8].main.temp_min + '</h6>');
-                            $('.tempDiv8').html('<h6>Current Temp - ' + data.list[8].main.temp + ' Degrees</h6>');
-                            // $('.humDiv').html('<h6>Sky Description - ' + data.list[8].weather[0].description + '</h6>');
-                            // $('.cloudDiv').html(data.list[8].dt_txt);
-                            // $('.lowTemp').html('<h6>Lowest Temp - ' + data.list[16].main.temp_min + '</h6>');
-                            $('.tempDiv16').html('<h6>Current Temp - ' + data.list[38].main.temp + ' Degrees</h6>');
-                            // $('.humDiv').html('<h6>Sky Description - ' + data.list[16].weather[0].description + '</h6>');
-                            // $('.cloudDiv').html(data.list[16].dt_txt);
+                            // $('.lowTemp1').html('<h6>Lowest Temp - ' + data.list[8].main.temp_min + '</h6>');
+                            // $('.tempDiv1').html('<h6>Current Temp - ' + data.list[8].main.temp + ' Degrees</h6>');
+                            // $('.humDiv1').html('<h6>Sky Description - ' + data.list[8].weather[0].description + '</h6>');
+                            // $('.cloudDiv1').html(data.list[8].dt_txt);
+                            // $('.lowTemp2').html('<h6>Lowest Temp - ' + data.list[16].main.temp_min + '</h6>');
+                            // $('.tempDiv2').html('<h6>Current Temp - ' + data.list[16].main.temp + ' Degrees</h6>');
+                            // $('.humDiv2').html('<h6>Sky Description - ' + data.list[16].weather[0].description + '</h6>');
+                            // $('.cloudDiv2').html(data.list[16].dt_txt);
                             $('#city').val('');
                         })
                     } else
@@ -159,6 +182,4 @@
         </script>
     </body>
 </html>
-
-
 <!--3c5c80a5cc759dc7c25ab64c0c9ebadd-->
