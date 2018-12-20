@@ -51,13 +51,22 @@ let emails = [];
 let names = [];
 
 // TODO: rewrite the following using arrow functions
-users.forEach(function(user) {
-  return emails.push(user.email);
-});
-users.forEach(function(user) {
-  return names.push(user.name);
+// users.forEach(function(user) {
+//   return emails.push(user.email);
+// });
+
+users.forEach((user) =>
+{
+  return emails.push(user.email)
 });
 
+
+// users.forEach(function(user) {
+//   return names.push(user.name);
+// });
+
+
+users.forEach(user => names.push(user.name));
 
 users.forEach(user) =>
 {
@@ -96,10 +105,7 @@ list += '</ul>';
 
 
 
-users.forEach((user) =>
-{
-  return emails.push(user.email)
-});
+
 
 users.forEach(user => names.push(user.name));
 
@@ -108,6 +114,11 @@ developers.push(`${name}'s email is ${email}${name} knows ${languages.join(', ')
 
 
 
+
+
+
+
+const usersWithThreeLanguages = users.filter((user) =>  user.languages.length > 2
 
 
 
